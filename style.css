@@ -12,3 +12,483 @@ html, body { height: 100%; margin: 0px; padding: 0px; }
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+.info {
+    padding-top: 40px;
+}
+
+// glitch
+// compiled from https://codepen.io/anon/pen/hEnJH
+
+  
+  @keyframes noise-anim {
+    0% {
+      clip: rect(4px, 9999px, 98px, 0);
+    }
+    5% {
+      clip: rect(1px, 9999px, 18px, 0);
+    }
+    10% {
+      clip: rect(17px, 9999px, 25px, 0);
+    }
+    15% {
+      clip: rect(79px, 9999px, 73px, 0);
+    }
+    20% {
+      clip: rect(75px, 9999px, 76px, 0);
+    }
+    25% {
+      clip: rect(50px, 9999px, 89px, 0);
+    }
+    30% {
+      clip: rect(58px, 9999px, 94px, 0);
+    }
+    35% {
+      clip: rect(43px, 9999px, 5px, 0);
+    }
+    40% {
+      clip: rect(96px, 9999px, 28px, 0);
+    }
+    45% {
+      clip: rect(56px, 9999px, 8px, 0);
+    }
+    50% {
+      clip: rect(77px, 9999px, 76px, 0);
+    }
+    55% {
+      clip: rect(42px, 9999px, 69px, 0);
+    }
+    60% {
+      clip: rect(96px, 9999px, 40px, 0);
+    }
+    65% {
+      clip: rect(90px, 9999px, 67px, 0);
+    }
+    70% {
+      clip: rect(33px, 9999px, 57px, 0);
+    }
+    75% {
+      clip: rect(98px, 9999px, 58px, 0);
+    }
+    80% {
+      clip: rect(99px, 9999px, 33px, 0);
+    }
+    85% {
+      clip: rect(83px, 9999px, 9px, 0);
+    }
+    90% {
+      clip: rect(47px, 9999px, 54px, 0);
+    }
+    95% {
+      clip: rect(50px, 9999px, 77px, 0);
+    }
+    100% {
+      clip: rect(77px, 9999px, 35px, 0);
+    }
+  }
+  .glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 f0f;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+  
+  @keyframes noise-anim-2 {
+    0% {
+      clip: rect(6px, 9999px, 73px, 0);
+    }
+    5% {
+      clip: rect(55px, 9999px, 78px, 0);
+    }
+    10% {
+      clip: rect(11px, 9999px, 59px, 0);
+    }
+    15% {
+      clip: rect(92px, 9999px, 93px, 0);
+    }
+    20% {
+      clip: rect(5px, 9999px, 11px, 0);
+    }
+    25% {
+      clip: rect(37px, 9999px, 45px, 0);
+    }
+    30% {
+      clip: rect(28px, 9999px, 37px, 0);
+    }
+    35% {
+      clip: rect(68px, 9999px, 74px, 0);
+    }
+    40% {
+      clip: rect(89px, 9999px, 69px, 0);
+    }
+    45% {
+      clip: rect(15px, 9999px, 95px, 0);
+    }
+    50% {
+      clip: rect(42px, 9999px, 36px, 0);
+    }
+    55% {
+      clip: rect(100px, 9999px, 43px, 0);
+    }
+    60% {
+      clip: rect(45px, 9999px, 82px, 0);
+    }
+    65% {
+      clip: rect(61px, 9999px, 30px, 0);
+    }
+    70% {
+      clip: rect(56px, 9999px, 37px, 0);
+    }
+    75% {
+      clip: rect(76px, 9999px, 91px, 0);
+    }
+    80% {
+      clip: rect(59px, 9999px, 93px, 0);
+    }
+    85% {
+      clip: rect(85px, 9999px, 54px, 0);
+    }
+    90% {
+      clip: rect(82px, 9999px, 94px, 0);
+    }
+    95% {
+      clip: rect(92px, 9999px, 58px, 0);
+    }
+    100% {
+      clip: rect(10px, 9999px, 45px, 0);
+    }
+  }
+  .glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 0ff;
+    top: 0;
+    color: white;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+  }
+  
+  span {
+    font: bold 6rem Arial;
+    text-transform: uppercase;
+    animation: glitch2 2s steps(100) infinite;
+  }
+  
+  @keyframes glitch2 {
+    0% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    1% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    2% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    3% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    4% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    5% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    6% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    7% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    8% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    9% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    10% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    11% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    12% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    13% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    14% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    15% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    16% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    17% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    18% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    19% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    20% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    21% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    22% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    23% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    24% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    25% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    26% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    27% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    28% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    29% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    30% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    31% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    32% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    33% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    34% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    35% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    36% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    37% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    38% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    39% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    40% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    41% {
+      text-shadow: 50px 0 0 #f0f, -50px 0 0 #0ff;
+    }
+    42% {
+      text-shadow: 0 0 0 #f0f, 0 0 0 #0ff;
+    }
+    43% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    44% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    45% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    46% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    47% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    48% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    49% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    50% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    51% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    52% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    53% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    54% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    55% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    56% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    57% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    58% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    59% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    60% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    61% {
+      text-shadow: 30px 0 0 #0ff, -30px 0 0 #0ff;
+    }
+    62% {
+      text-shadow: 0 0 0 #0ff, 0 0 0 #0ff;
+    }
+    63% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #f0f;
+    }
+    64% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #f0f;
+    }
+    65% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #f0f;
+    }
+    66% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #f0f;
+    }
+    67% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    68% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    69% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    70% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    71% {
+      text-shadow: 70px 0 0 #0ff, -70px 0 0 #f0f;
+    }
+    72% {
+      text-shadow: 0 0 0 #0ff, 0 0 0 #f0f;
+    }
+    73% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    74% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    75% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    76% {
+      text-shadow: 1px 0 0 #0ff, -1px 0 0 #f0f;
+    }
+    77% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    78% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    79% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    80% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #f0f;
+    }
+    81% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    82% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    83% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    84% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    85% {
+      text-shadow: 0.5px 0 0 #0ff, -0.5px 0 0 #0ff;
+    }
+    86% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    87% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    88% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    89% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    90% {
+      text-shadow: -1px 0 0 #0ff, 1px 0 0 #0ff;
+    }
+    91% {
+      text-shadow: 60px 0 0 #0ff, -60px 0 0 #f0f;
+    }
+    92% {
+      text-shadow: 0 0 0 #0ff, 0 0 0 #f0f;
+    }
+    92% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    93% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    94% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    95% {
+      text-shadow: 0.7px 0 0 #f0f, -0.7px 0 0 #0ff;
+    }
+    96% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    97% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    98% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    99% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+    100% {
+      text-shadow: -1px 0 0 #f0f, 1px 0 0 #0ff;
+    }
+  }
+  
